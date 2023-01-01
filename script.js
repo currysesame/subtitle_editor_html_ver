@@ -64,6 +64,15 @@ var subs = [];
 })();
 //========================================
 
+function update() {
+	var select = document.getElementById('select_id');
+	var option = select.options[select.selectedIndex];
+	console.log(option.value)
+	// document.getElementById('value').value = option.value;
+	// document.getElementById('text').value = option.text;
+}
+
+update();
 
 // key Board listener
 //========================================
