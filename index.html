@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Subtitle</title>
+ <style>
+ body {background-color: coral;}
+  video::cue{
+   font-size: 32px;
+   background-color: black;
+   color: black;
+  }
+ </style>
+<body>
+	<div id="home">
+		<table >
+			<tr>
+				<th>
+					<div class="container">
+		       			<video id='myvideo' src="yourVideo.mp4" controls width="700" height="500"></video>
+		      		</div>
+					<button onclick="startThisSub()" class="btn" id="btn=1">start point</button>        
+					<button onclick="endThisSub()" class="btn" id="btn=2">end point</button>   
+					<p> </p>
+					<div id="about">
+				        <input type="text" id="username">
+					</div>
+				</th>
+				<th>st
+				</th>
+				<th>
+					<tr>
+						<th>
+							<button onclick="startThisSub()" class="btn" id="submit">backward</button>   
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<select id="select_id" class="form-select" multiple aria-label="multiple select example">
+							<option value="0">__0__</option>
+							<option value="1">__1__</option>
+							<option value="2">__2__</option>
+							<option value="3">__3__</option>
+							</select>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<button onclick="startThisSub()" class="btn" id="submit">forward</button> 
+						</th>  
+					</tr>
+				</th>
+			</tr>
+		</table>
+	</div>
+    <script src="script.js"></script>
+
+</body>
+</html>
+ 
