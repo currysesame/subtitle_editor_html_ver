@@ -13,6 +13,7 @@
   }
  </style>
 <body>
+	<p id="subIndex"> </p>
 	<div id="home">
 		<table >
 			<tr>
@@ -24,7 +25,10 @@
 					<button onclick="endThisSub()" class="btn" id="btn=2">end point</button>   
 					<p> </p>
 					<div id="about">
-				        <input type="text" id="username">
+						<form name="inputSubForm">
+					    	<input type="text" name="currentSub" value="">
+						</form>
+				<!--         <input type="text" id="currentSub"> -->
 					</div>
 				</th>
 				<th>st
@@ -43,13 +47,6 @@
 							<option value="2">__2__</option>
 							<option value="3">__3__</option>
 							</select>
-		<!-- 					<select name="fruits" id="fruit-select">
-						      <option value="">--Choose an option--</option>
-						      <option value="apple">Apple</option>
-						      <option value="banana">Banana</option>
-						      <option value="kiwi">Kiwi</option>
-						    </select> -->
-
 						</th>
 					</tr>
 					<tr>
@@ -58,6 +55,7 @@
 						</th>  
 					</tr>
 				</th>
+
 			</tr>
 		</table>
 	</div>

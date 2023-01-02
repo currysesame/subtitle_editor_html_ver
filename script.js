@@ -8,12 +8,14 @@
 
 // REF: https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/round
 // REF: https://bobbyhadz.com/blog/javascript-set-select-element-value
+// REF: https://www.delftstack.com/howto/javascript/change-input-value-javascript/
 
 // Init value
 var starttime = [];
 var endtime = [];
 var subs = [];
-
+var subIndex = 0;
+subsR = ["sub0", "sub1", "sub2", "sub3"];
 var select = document.getElementById('select_id');
 select.value = '0';
 //========================================
@@ -68,7 +70,7 @@ select.value = '0';
 })();
 //========================================
 
-
+// change sub
 // --------------------------------
 
 const btn_b = document.getElementById('btn_b');
@@ -79,8 +81,11 @@ btn_b.addEventListener('click', function handleClick() {
 		select.value = '0';
 	}
   	else{
+  		subIndex -= 1;
 		select.value = String(parseInt(option.value)-1);
   	}
+  	var subInputBox = document.querySelector('input[name="currentSub"]');
+  	subInputBox.value = subsR[select.value];
 	var option = select.options[select.selectedIndex];
 	console.log(option.value)
 });
@@ -93,17 +98,22 @@ btn_f.addEventListener('click', function handleClick() {
 		select.value = '3';
 	}
   	else{
+  		subIndex += 1
 		select.value = String(parseInt(option.value)+1);
   	}
+  	var subInputBox = document.querySelector('input[name="currentSub"]');
+  	subInputBox.value = subsR[select.value];
 	var option = select.options[select.selectedIndex];
 	console.log(option.value)
 });
 
-
 function update() {
 	var select = document.getElementById('select_id');
 	var option = select.options[select.selectedIndex];
-	console.log(option.value)
+	console.log(option.value);
+	document.getElementById('subIndex').value = subIndex;
+	var subInputBox = document.querySelector('input[name="currentSub"]');
+  	subInputBox.value = subsR[select.value];
 }
 update();
 
