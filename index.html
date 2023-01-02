@@ -32,22 +32,29 @@
 				<th>
 					<tr>
 						<th>
-							<button onclick="startThisSub()" class="btn" id="submit">backward</button>   
+							<button id="btn_b">backward</button>   
 						</th>
 					</tr>
 					<tr>
 						<th>
-							<select id="select_id" class="form-select" multiple aria-label="multiple select example">
+							<select id="select_id" class="form-select" multiple aria-label="multiple select example" onChange="update()">
 							<option value="0">__0__</option>
 							<option value="1">__1__</option>
 							<option value="2">__2__</option>
 							<option value="3">__3__</option>
 							</select>
+		<!-- 					<select name="fruits" id="fruit-select">
+						      <option value="">--Choose an option--</option>
+						      <option value="apple">Apple</option>
+						      <option value="banana">Banana</option>
+						      <option value="kiwi">Kiwi</option>
+						    </select> -->
+
 						</th>
 					</tr>
 					<tr>
 						<th>
-							<button onclick="startThisSub()" class="btn" id="submit">forward</button> 
+							<button id="btn_f">forward</button> 
 						</th>  
 					</tr>
 				</th>

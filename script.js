@@ -6,14 +6,18 @@
 // Want to build something that old computer can use,
 // nodeJS is heavy for old computers.
 
+// REF: https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+// REF: https://bobbyhadz.com/blog/javascript-set-select-element-value
 
 // Init value
 var starttime = [];
 var endtime = [];
 var subs = [];
 
+var select = document.getElementById('select_id');
+select.value = '0';
 //========================================
-// REF: https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+
 // 閉包含數
 (function() {
   /**
@@ -64,14 +68,43 @@ var subs = [];
 })();
 //========================================
 
+
+// --------------------------------
+
+const btn_b = document.getElementById('btn_b');
+
+btn_b.addEventListener('click', function handleClick() {
+	var option = select.options[select.selectedIndex];
+	if (parseInt(option.value) === 0){
+		select.value = '0';
+	}
+  	else{
+		select.value = String(parseInt(option.value)-1);
+  	}
+	var option = select.options[select.selectedIndex];
+	console.log(option.value)
+});
+
+const btn_f = document.getElementById('btn_f');
+
+btn_f.addEventListener('click', function handleClick() {
+	var option = select.options[select.selectedIndex];
+	if (parseInt(option.value) === 3){
+		select.value = '3';
+	}
+  	else{
+		select.value = String(parseInt(option.value)+1);
+  	}
+	var option = select.options[select.selectedIndex];
+	console.log(option.value)
+});
+
+
 function update() {
 	var select = document.getElementById('select_id');
 	var option = select.options[select.selectedIndex];
 	console.log(option.value)
-	// document.getElementById('value').value = option.value;
-	// document.getElementById('text').value = option.text;
 }
-
 update();
 
 // key Board listener
